@@ -122,11 +122,18 @@ validate.
 - Adversarial Machine Learning
 - Computer Vision
   
-# Repository Structure
+## Repository Structure
+
+```text
 data-free-universal-adversarial-perturbations/
 │
 ├── Data_Free_Universal_Adversarial_Perturbations.ipynb
-└── README.md
+├── Data_Free_Universal_Adversarial_Perturbations.py
+├── README.md
+├── requirements.txt
+└── jpeg_compression_results.png
+```
+
 
 # How to Run
 The project was implemented in Google Colab.
