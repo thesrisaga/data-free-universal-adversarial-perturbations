@@ -78,27 +78,33 @@ Robustness Analysis
 The report describes the perturbation as being crafted using random noise,
 while evaluation was performed separately on real, previously unseen images.
 
-# Results
-The reproduced experiment achieved a 43.5% fooling rate on the
-200-image evaluation set.
-The additional JPEG compression experiment produced the following fooling
-rates:
-JPEG Quality	Fooling Rate
-100	41.0%
-90	39.0%
-75	34.0%
-50	37.5%
-25	38.5%
-10	53.5%
+## Results
 
+The reproduced data-free universal perturbation experiment achieved a
+**43.5% fooling rate** on the 200-image evaluation set.
 
-The results show a non-monotonic relationship between JPEG compression
-quality and fooling rate. In particular, the strongest compression tested
-(JPEG quality 10) produced a higher fooling rate than the uncompressed
-baseline.
-The report treats the possible explanation involving JPEG/DCT artifacts as
-a hypothesis requiring further investigation rather than a confirmed causal
-mechanism.
+### JPEG Compression Experiment
+
+The additional experiment evaluated whether the perturbation remained
+effective after JPEG compression.
+
+| JPEG Quality | Fooling Rate |
+|--------------|--------------|
+|   100        |   41.0%      |
+|   90         |   39.0%      |
+|   75         |   34.0%      |
+|   50         |   37.5%      |
+|   25         |   38.5%      |
+|   10         |   53.5%      |
+
+The results show a **non-monotonic relationship** between JPEG compression
+quality and fooling rate. The strongest compression tested (quality 10)
+produced a higher fooling rate than the uncompressed baseline.
+
+The possible interaction between JPEG compression artifacts and the
+adversarial perturbation is treated as a **hypothesis rather than a
+confirmed causal explanation** and would require further experiments to
+validate.
 
 # Technologies
 - Python
